@@ -57,7 +57,7 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.07em;
   line-height: 1.2;
-  max-width: 18ch;
+  max-width: none;
   color: var(--text);
 }
 
