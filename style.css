@@ -93,13 +93,12 @@ h1 {
 }
 
 .order-toggle button.active {
-  opacity: 0.95;
-  text-decoration: underline;
+  opacity: 0.80;
   text-underline-offset: 0.18em;
 }
 
 .order-toggle span {
-  opacity: 0.32;
+  opacity: 0.40;
   margin: 0 0.42rem;
 }
 
