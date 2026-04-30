@@ -25,6 +25,7 @@ body {
   position: relative;
 }
 
+/* Background field */
 body::before {
   content: "";
   position: fixed;
@@ -39,31 +40,7 @@ body::before {
   z-index: 0;
 }
 
-.order-toggle {
-  margin-top: 1.75rem;
-  text-align: center;
-}
-
-.order-toggle button {
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  opacity: 0.45;
-  padding: 0 0.45rem;
-}
-
-.order-toggle button.active {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-}
-
-.order-toggle span {
-  opacity: 0.35;
-}
-
+/* Layout */
 .container {
   position: relative;
   z-index: 1;
@@ -73,26 +50,60 @@ body::before {
 }
 
 .page-header {
-  margin: 0 0 3.4rem 0;
+  margin: 0 0 3.2rem 0;
 }
 
+/* Title */
 h1 {
-  margin: 0 0 0.7rem 0;
+  margin: 0 0 0.75rem 0;
   font-size: 1.55rem;
   font-weight: 600;
   letter-spacing: 0.07em;
   line-height: 1.2;
-  max-width: none;
   color: var(--text);
 }
 
+/* Subtitle + toggle as one block */
 .subtitle {
-  margin: 0;
-  font-size: 0.82rem;
-  letter-spacing: 0.03em;
+  margin: 0 0 0.2rem 0;
+  font-size: 0.92rem;
+  letter-spacing: 0.025em;
   color: var(--meta);
 }
 
+.order-toggle {
+  margin: 0;
+  text-align: left;
+  font-size: 0.92rem;
+  letter-spacing: 0.025em;
+  color: var(--meta);
+}
+
+/* Toggle styling (text, not buttons) */
+.order-toggle button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.42;
+}
+
+.order-toggle button.active {
+  opacity: 0.95;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.order-toggle span {
+  opacity: 0.32;
+  margin: 0 0.42rem;
+}
+
+/* Entries */
 .entry {
   display: grid;
   grid-template-columns: 92px 1fr;
@@ -116,7 +127,7 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 0.3rem 0;
+  margin: 0 0 0.32rem 0;
   font-size: 1.32rem;
   font-weight: 500;
   line-height: 1.2;
@@ -141,6 +152,7 @@ h2 a:focus {
   line-height: 1.45;
 }
 
+/* Signature */
 .signature {
   margin: 4.2rem 0 0 0;
   text-align: center;
@@ -155,11 +167,12 @@ h2 a:focus {
 
 .signature a:hover,
 .signature a:focus {
-  color: var(--signature);
   text-decoration: none;
 }
 
+/* Mobile */
 @media (max-width: 640px) {
+
   body::before {
     background-position: 62% 18%;
     background-size: 118vw auto;
@@ -174,17 +187,17 @@ h2 a:focus {
   }
 
   .page-header {
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.6rem;
   }
 
   h1 {
     font-size: 1.28rem;
     letter-spacing: 0.06em;
-    max-width: none;
   }
 
-  .subtitle {
-    font-size: 0.78rem;
+  .subtitle,
+  .order-toggle {
+    font-size: 0.86rem;
   }
 
   .entry {
