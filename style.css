@@ -39,6 +39,31 @@ body::before {
   z-index: 0;
 }
 
+.order-toggle {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.order-toggle button {
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.45;
+  padding: 0 0.45rem;
+}
+
+.order-toggle button.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.order-toggle span {
+  opacity: 0.35;
+}
+
 .container {
   position: relative;
   z-index: 1;
